@@ -1,7 +1,7 @@
 // Voltra API — single unified serverless function (catch-all router).
 // Consolidates every endpoint so the Vercel Hobby deployment stays under the
 // 12-function limit. Shared logic lives in /lib/server (bundled in, not counted).
-import supabase from './db-client.js';
+import supabase from '../lib/server/db-client.js';
 import { preflight } from '../lib/server/cors.js';
 import { syncCatalogWithCJ } from '../lib/server/cj.js';
 import { requireAdmin } from '../lib/server/admin.js';
